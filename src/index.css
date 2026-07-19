@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #632ee8;
+  --color-secondary: #2a9d8f;
+}
+
+/* primary color  */
+
+.text-primary {
+  @apply bg-gradient-to-r from-[#632ee8] to-[#9f63f2] text-transparent bg-clip-text;
+}
+
+/* primary button */
+
+.btn-primary {
+  @apply bg-gradient-to-r from-[#632ee8] to-[#9f63f2] text-white border-none py-2 px-4;
+}
+
+.btn-primary:hover {
+  @apply opacity-90;
+}
+
+/* outline button */
+.btn-outline {
+  @apply bg-transparent text-[#632ee8] border border-[#632ee8] py-2 px-4 rounded;
+}
+
+.btn-outline:hover {
+  @apply opacity-90;
+}
+
+.custom-badge {
+  @apply bg-gradient-to-r from-[#632ee8] to-[#9f63f2] text-white py-1 px-3 rounded-full w-fit;
+}
