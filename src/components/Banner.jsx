@@ -1,7 +1,7 @@
 const Banner = () => {
   return (
     <div
-      style={{ backgroundImage: "url('background.png')" }}
+      style={{ backgroundImage: "url('background.webp')" }}
       className="bg-cover bg-center py-20"
     >
       <h1 className="text-6xl font-bold text-center mt-10">
