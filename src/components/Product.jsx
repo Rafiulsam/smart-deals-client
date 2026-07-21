@@ -15,13 +15,13 @@ const Product = ({ product }) => {
       </figure>
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
-        <p>
+        <p className="font-semibold">
           Price: ${price_min} - ${price_max}
         </p>
         <div className="card-actions">
           <Link
             className="btn btn-outline w-full "
-            to={`product-details/${_id}`}
+            to={`/product-details/${_id}`}
           >
             View Details
           </Link>

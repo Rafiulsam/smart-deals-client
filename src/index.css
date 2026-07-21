@@ -10,13 +10,13 @@
 /* primary color  */
 
 .text-primary {
-  @apply bg-gradient-to-r from-[#632ee8] to-[#9f63f2] text-transparent bg-clip-text;
+  @apply bg-linear-to-r from-[#632ee3] to-[#9f63f2] text-transparent bg-clip-text;
 }
 
 /* primary button */
 
 .btn-primary {
-  @apply bg-gradient-to-r from-[#632ee8] to-[#9f63f2] text-white border-none py-2 px-4;
+  @apply bg-linear-to-r from-[#632ee8] to-[#9f63f2] text-white border-none py-2 px-4;
 }
 
 .btn-primary:hover {

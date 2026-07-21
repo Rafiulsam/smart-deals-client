@@ -19,7 +19,11 @@ const router = createBrowserRouter([
     Component: RootLayout,
     children: [
       { index: true, Component: Home },
-      { path: "all-products", Component: AllProducts },
+      {
+        path: "all-products",
+        Component: AllProducts,
+        loader: () => fetch("http://localhost:3000/products"),
+      },
       { path: "register", Component: Register },
       { path: "login", Component: Login },
       { path: "my-products", Component: MyProducts },

@@ -15,24 +15,38 @@ const Footer = () => {
           </p>
         </aside>
         <nav>
-          <h6 className="footer-title">Services</h6>
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
+          <h6 className="footer-title">Quick Links</h6>
+          <NavLink to="/all-products" className="link link-hover">
+            All Products
+          </NavLink>
+          <NavLink to="/dashboard" className="link link-hover">
+            Dashboard
+          </NavLink>
+          <NavLink to="/login" className="link link-hover">
+            Login
+          </NavLink>
+          <NavLink to="/register" className="link link-hover">
+            Register
+          </NavLink>
         </nav>
         <nav>
-          <h6 className="footer-title">Company</h6>
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
+          <h6 className="footer-title">Categories</h6>
+          <a className="link link-hover">Electronic</a>
+          <a className="link link-hover">Fashion</a>
+          <a className="link link-hover">Home & Living</a>
+          <a className="link link-hover">Furniture</a>
         </nav>
         <nav>
           <h6 className="footer-title">Legal</h6>
           <a className="link link-hover">Terms of use</a>
           <a className="link link-hover">Privacy policy</a>
           <a className="link link-hover">Cookie policy</a>
+        </nav>
+        <nav>
+          <h6 className="footer-title">Social Links</h6>
+          <a className="link link-hover">Facebook</a>
+          <a className="link link-hover">Twitter</a>
+          <a className="link link-hover">Instagram</a>
         </nav>
       </footer>
 

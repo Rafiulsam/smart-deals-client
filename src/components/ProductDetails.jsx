@@ -1,5 +1,6 @@
 import { use, useEffect, useRef, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 import { AuthContext } from "../context/AuthContext";
 
 const ProductDetails = () => {
@@ -62,6 +63,23 @@ const ProductDetails = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data);
+        if (data.insertedId) {
+          const bidWithId = {
+            ...newBid,
+            _id: data.insertedId,
+          };
+          setBids((prevBids) => [...prevBids, bidWithId]);
+          form.reset();
+          modalRef.current.close();
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your bid has been placed successfully",
+            showConfirmButton: false,
+            timer: 2000,
+            theme: "dark",
+          });
+        }
       })
       .catch((error) => {
         console.error("Error:", error);
