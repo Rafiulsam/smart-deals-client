@@ -30,14 +30,38 @@ const ProductDetails = () => {
     const bid = form.bid.value;
     const name = form.name.value;
     const email = form.email.value;
-    console.log(name, email, bid);
+
+    const newBid = {
+      productId: _id,
+      buyerName: name,
+      buyerEmail: email,
+      bidAmount: bid,
+      status: "pending",
+    };
+    console.log(newBid);
+    fetch("http://localhost:3000/bids", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newBid),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+        // Optionally, update the UI or show a success message
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        // Optionally, show an error message
+      });
   };
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-12 mt-10 mb-16">
       {/* Products info section*/}
       <div>
         <img
-          className="max-w-full w-full h-auto lg:h-[500px] lg:w-[500px] rounded-md"
+          className="max-w-full w-full h-auto lg:h-125 lg:w-125 rounded-md"
           src={image}
           alt={name}
         />
@@ -143,7 +167,7 @@ const ProductDetails = () => {
                   className="input w-full"
                   placeholder="Offered Price"
                 />
-                <button className="btn btn-neutral mt-4">Place your bid</button>
+                <button className="btn btn-primary mt-4">Place your bid</button>
               </fieldset>
             </form>
             <div className="modal-action">
