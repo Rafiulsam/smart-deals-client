@@ -1,3 +1,5 @@
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
@@ -44,9 +46,20 @@ const Footer = () => {
         </nav>
         <nav>
           <h6 className="footer-title">Social Links</h6>
-          <a className="link link-hover">Facebook</a>
-          <a className="link link-hover">Twitter</a>
-          <a className="link link-hover">Instagram</a>
+          <div className="flex gap-4 text-2xl">
+            <a>
+              {" "}
+              <FaSquareXTwitter />{" "}
+            </a>
+            <a>
+              {" "}
+              <FaLinkedin />{" "}
+            </a>
+            <a>
+              {" "}
+              <FaFacebook />{" "}
+            </a>
+          </div>
         </nav>
       </footer>
 
